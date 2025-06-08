@@ -70,3 +70,7 @@ main{
     border-width: 0;
     font-weight: bold;
 }
+.back-link{
+    padding: 2%;
+    color: black;
+}
