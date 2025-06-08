@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gra terenowa - Rodzinny Piknik z Duchem Świętym u św. Józefa 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./godlo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <span>Gra terenowa - Rodzinny Piknik z Duchem Świętym u św. Józefa 2025</span>
+    </header>
+    <main>
+        <div class="main-content">
+            <h1>Wprowadź hasło:</h1>
+            <input class="input-pwd" id="pwd"/><button class="btn-pwd" onclick="goToPage()">>></button>
+        </div>
+    </main>
+    <footer>
+        <span><img src="./godlo.png" height="15dvh"> KSM Puszczykowo </span>
+    </footer>
+</body>
+
+<script>
+
+    var goToPage = ()=>{
+        let location = document.querySelector("#pwd").value;
+        if(location.trim() == "") return
+        if(["kolorowanka", "owoc", "origami", "drzewa", "pilka"].includes(location.toLowerCase().trim())){
+            window.location = "./"+location.toLowerCase().trim()+".html"
+        }else{
+            alert("Hmmm... Nasza gra terenowa nie ma punktu \""+location+"\"")
+        }
+    }
+
+</script>
+
+</html>
